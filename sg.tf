@@ -1,5 +1,5 @@
 resource "aws_security_group" "db_sg" {
-  name_prefix = "rds-sg-"
+  name_prefix = "rds-sg-product"
   description = "Allow database access"
 
   ingress {

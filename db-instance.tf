@@ -1,5 +1,5 @@
 resource "aws_db_instance" "rds_postgresql" {
-  identifier = "rds-customer-tf"
+  identifier = "rds-product-tf"
   allocated_storage    = 20
   max_allocated_storage = 100
   engine               = "postgres"
@@ -15,6 +15,6 @@ resource "aws_db_instance" "rds_postgresql" {
 
   vpc_security_group_ids = [aws_security_group.db_sg.id]
   tags = {
-    Name = "Customer-RDS"
+    Name = "Product-RDS"
   }
 }
