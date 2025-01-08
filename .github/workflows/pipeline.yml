@@ -1,4 +1,4 @@
-name: Build Amazon RDS - Customer
+name: Build Amazon RDS - Product
 on:
   push:
     branches:
