@@ -1,13 +1,13 @@
 resource "aws_security_group" "db_sg" {
-  name_prefix = "rds-sg-product"
-  description = "Allow database access"
+  name_prefix = "rds-sg-customer"
+  vpc_id = data.aws_vpc.vpc.id
 
   ingress {
     description = "Allow access from ECS tasks"
     from_port   = 5432
     to_port     = 5432
     protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"] 
+    cidr_blocks = ["172.31.0.0/16"]
   }
 
   egress {
